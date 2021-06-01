@@ -1,7 +1,7 @@
 # Space-Travel-WebApp
 Space travel themed WebApp developed using Spring framework.
 
-Main Technologies used: Spring framework, MySQL8.0, Hibernate, Bootstrap.
+Main Technologies used: Spring framework, MySQL8.0, Hibernate, Bootstrap.<br />
 Languages: HTML, CSS, Java, HQL.
 
 This webapp is secured with the Spring Security module, and different users can do different things on the app:<br />
