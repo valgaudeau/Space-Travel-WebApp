@@ -1,0 +1,203 @@
+@charset "ISO-8859-1";
+
+/* @media only screen and (max-width: 600px) */
+
+body
+{
+  background-color: rgb(28, 20, 31);
+  font-family: var(--bs-font-sans-serif);
+}
+
+.container
+{
+  height: auto;
+  width: 72%;
+  background-color:white;
+  margin: 0 auto;
+}
+
+#a-left
+{
+  padding-left: 7px;
+  border-left: 3px solid blue;
+}
+
+.whitespace
+{
+	text-align: center;
+}
+
+h1
+{
+  padding-left: 20px;
+  color: darkblue;
+  font-weight: 500;
+}
+
+.divy
+{
+  height: 250px;
+}
+
+#block1 img
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}​
+
+#block2
+{
+  height:50px;
+}
+
+.btns-employee
+{
+   background-color: orange;
+   border-color: yellow;
+   display: inline-block;
+   border-radius: .25em;
+   border: 1px solid transparent;
+   padding: .5rem .5rem;
+   margin-left: 10px;
+   margin-bottom: 15px;
+}
+
+.btns-client
+{
+   background-color: orange;
+   border-color: yellow;
+   display: inline-block;
+   border-radius: .25em;
+   border: 1px solid transparent;
+   padding: .5rem .5rem;
+   margin-left: 10px;
+   margin-bottom: 15px;
+}
+
+.btns-employee a
+{
+	color: white;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+.btns-client a
+{
+	color: white;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+.table-container
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spacetriptable
+{
+  width: 100%;
+  text-align: center;
+  padding: .5rem .5rem;
+  border-bottom-width: 1px;
+  font-weight: 400;
+  line-height: 1.5;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.spacetriptable th
+{
+  padding-left: 2%;
+  padding-right: 2%;
+  font-size: 1rem;
+  border-style: solid;
+  border-left-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-width: 1px;
+}
+
+
+.spacetriptable td
+{
+  padding: 8px;
+  border-style: solid;
+  border-left-style: none;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-width: 1px;
+  border-color: grey;
+  font-size: 1rem;
+}
+
+.spacetriptable a
+{
+  color: #fff;
+  background-color: #198754;
+  border-color: #198754;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: .25em;
+  border: 1px solid transparent;
+  padding: .3rem .3rem;
+}
+
+#delete-btn
+{
+  background-color: red;
+}
+
+#block7
+{
+  height: 60px;
+  background-color: #CDCDCD;
+}
+
+#block7 ul
+{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.navbar li
+{
+  display: inline-block;
+  margin-right: -5px;
+  /* margin-right: -4px; is what solved the issue with hover on navbar menu not hightlighting what I wanted. See https://designshack.net/articles/css/whats-the-deal-with-display-inline-block/  
+  The article explained how to achieve inline-block without whitespace between elements as is the default. */ 
+  height:50px;
+  line-height: 45px;
+  min-width: 70px;
+  font-size: 20px;
+}
+
+.navbar a
+{
+  padding-left: 4px;
+  padding-right: 6px;
+  border-right: 3px solid blue;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.navbar a:hover
+{
+  background-color: blue;
+  opacity: 0.8;
+  color: white;
+}
+
+.navbar ul
+{
+  background-color: black;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}

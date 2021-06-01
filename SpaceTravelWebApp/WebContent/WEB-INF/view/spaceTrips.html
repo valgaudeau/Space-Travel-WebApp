@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Page with table displaying available space trips</title>
+		<link rel="stylesheet" type="text/css" href="resources/spaceTrips.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		      	<li><a id="a-left" th:href="@{/}">Home</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		       </ul>
+		    </div>
+        <div class="whitespace">
+          <h1>All Currently Planned Space Trips</h1>
+        </div>
+        
+		<div class="btns-employee" sec:authorize="hasRole('EMPLOYEE')">
+			<a sec:authorize="hasRole('EMPLOYEE')" th:href="@{/addSpaceTrip}">Add New Trip</a>
+		</div>
+		
+		<div class="btns-client" sec:authorize="hasRole('CLIENT')">
+			<a sec:authorize="hasRole('CLIENT')" th:href="@{/addComment}">Add Comment To a Trip</a>
+		</div>	
+		
+		<div class="alert alert-danger" role="alert" th:if="${userAlreadySignedIn}" th:text="${param.userAlreadySignedIn}"></div>
+		
+		<div class="table-container">
+			<!-- This table will only display if the tours list isn't empty -->
+			<table class="spacetriptable" th:if="${!spaceTrips.empty}">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Name</th>
+						<th scope="col">Code</th>
+						<th scope="col">Destination</th>
+						<th scope="col">Date</th>
+						<th scope="col">Duration</th>
+						<th sec:authorize="hasRole('EMPLOYEE')" scope="col">Edit</th>
+						<th sec:authorize="hasRole('EMPLOYEE')" scope="col">Edit Details</th>
+						<th sec:authorize="hasRole('ADMIN')" scope="col">Remove</th>
+						<th scope="col">Details</th> 
+						<th sec:authorize="hasRole('CLIENT')" scope="col">Sign in</th>  
+					</tr>
+				</thead>
+				<!-- The following line will create a new table row for every object in our tours list -->
+				<tbody>
+					<tr th:each="spaceTrip : ${spaceTrips}">
+						<td th:text="${spaceTripStat.count}"></td>
+						<td th:text="${spaceTrip.name}"></td>
+						<td th:text="${spaceTrip.Code}"></td>
+						<td th:text="${spaceTrip.Destination}"></td>
+						<td th:text="${#dates.format(spaceTrip.date, 'yyyy-MM-dd')}"></td>
+						<td th:text="${spaceTrip.Duration}"></td>
+						<td sec:authorize="hasRole('EMPLOYEE')"><a class="btn btn-primary" th:href="@{/editSpaceTrip/} + ${spaceTrip.id}">Edit</a></td>
+						<td sec:authorize="hasRole('EMPLOYEE')"><a class="btn btn-primary" th:href="@{/editSpaceTripDetails/} + ${spaceTrip.id}">Edit Details</a>
+						<td sec:authorize="hasRole('ADMIN')"><a id="delete-btn" th:href="@{/deleteSpaceTrip/} + ${spaceTrip.id}">Delete</a></td>
+						<td><a th:href="@{/showSpaceTripDetails/} + ${spaceTrip.id}">Show Details</a>
+						<td sec:authorize="hasRole('CLIENT')">
+							<a th:href="@{/addUserToSpaceTrip/} + ${spaceTrip.id}">Join Trip</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<div class="row" th:if="${spaceTrips.empty}">
+			<h3>No Space Trips Currently Available</h3>
+		</div>
+
+		 <div id="block7" class="divy clearfix">
+		   	<ul>
+		    	<li><a th:href="@{/about}">About</a></li>
+		    	<li><a th:href="@{/contact}">Contact</a></li>
+		    </ul>
+		  </div>
+	   </div>
+	</body>
+
+</html>

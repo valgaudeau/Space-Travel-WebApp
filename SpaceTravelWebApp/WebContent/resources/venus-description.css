@@ -1,0 +1,188 @@
+@charset "ISO-8859-1";
+
+/* @media only screen and (max-width: 600px) */
+
+body
+{
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  background-color: rgb(28, 20, 31);
+}
+
+.container
+{
+  height: auto;
+  width: 72%;
+  background-color:white;
+  margin: 0 auto;
+}
+
+h1
+{
+  padding-left: 20px;
+  color: darkblue;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+h2
+{
+  font-size: 18px;
+}
+
+p
+{
+  margin-top: 0px;
+}
+
+.divy
+{
+  height: 250px;
+}
+
+.sidemenu1 img
+{
+  border-radius: 5%;
+}
+
+.sidemenu2 img
+{
+  border-radius: 5%;
+}
+
+.container img
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}​
+
+#block2
+{
+  height:50px;
+}
+
+#block3
+{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+  height: auto;
+}
+
+#block4
+{
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 17px;
+  height: auto;
+}
+
+#block5
+{
+  padding-right: 5%;
+}
+
+#block6
+{
+  padding-right: 5%;
+}
+
+#block7
+{
+  height: 60px;
+  background-color: #CDCDCD;
+}
+
+#block7 ul
+{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.main-block-1
+{
+  display: block;
+}
+
+.main1
+{
+  width: 60%;
+  float: left;
+  background-color:white;
+}
+
+.sidemenu1
+{
+  float: right;
+  width: 32%;
+}
+
+.main-block-2
+{
+  display: block;
+}
+
+.main2
+{
+  width: 60%;
+  float: left;
+  background-color:white;
+}
+
+.sidemenu2
+{
+  padding-top: 5%;
+  padding-bottom: 1.5%;
+  float: right;
+  width: 32%;
+}
+
+.clearfix
+{
+  clear: both;
+}
+
+.navbar li
+{
+  display: inline-block;
+  margin-right: -5px;
+  /* margin-right: -4px; is what solved the issue with hover on navbar menu not hightlighting what I wanted. See https://designshack.net/articles/css/whats-the-deal-with-display-inline-block/  
+  The article explained how to achieve inline-block without whitespace between elements as is the default. */ 
+  height:50px;
+  line-height: 45px;
+  font-size: 20px;
+  min-width: 70px;
+}
+
+.navbar a
+{
+  padding-left: 4px;
+  padding-right: 6px;
+  border-right: 3px solid blue;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+#a-left
+{
+  border-left: 3px solid blue;
+}
+
+.navbar a:hover
+{
+  background-color: blue;
+  opacity: 0.8;
+  color: white;
+}
+
+.navbar ul
+{
+  background-color: black;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}

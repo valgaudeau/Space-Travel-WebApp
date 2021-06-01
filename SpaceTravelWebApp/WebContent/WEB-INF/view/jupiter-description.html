@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Page dedicated to information about Jupiter</title>
+		<link rel="stylesheet" type="text/css" href="resources/jupiter-description.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		        <li><a id="a-left" th:href="@{/}">Home</a></li>
+		        <li><a th:href="@{/showTrips}">All Currently Planned Trips</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		      </ul>
+		    </div>
+        <div class="whitespace">
+          <a th:href="@{/showTrips}"><h1>Destination Jupiter - Book Your Trip Now!</h1></a>
+        </div>
+		<div class="main-block-1">
+			<div class="main1">
+			   <div id="block3" class="divy">
+	              <p>
+	                Jupiter is one of our most popular destinations! It's the fifth planet from the Sun and the largest in the Solar System.
+	                It is a gas giant with a mass (more than) two and a half times that of all the other planets in the Solar System combined, but (a little) less
+	                than one-thousandth the mass of the Sun. Jupiter is the third-brightest natural object in the Earth's night sky after the Moon and Venus.
+	                It has been observed since pre-historic times and is named after the Roman god Jupiter, the king of the gods, because of its massive size.
+	              </p>
+
+	              <p>
+	                Surrounding Jupiter is a faint planetary ring system and a powerful magnetosphere. Jupiter's magnetic tail is nearly 800 million km long,
+	                covering the entire distance to Saturn's orbit. Jupiter has almost a hundred known moons and possibly many more, including the four large
+	                Galilean moons discovered by Galileo Galilei in 1610. Ganymede, the largest of these, has a diameter greater than that of the planet Mercury.
+	              </p>
+
+				  <p>
+					Jupiter is like a star in composition. If Jupiter had been about 80 times more massive, it would have become a star rather than a planet.
+				  </p>
+
+				</div>
+			</div>
+			<div class="sidemenu1">
+				<div id="block5" class="divy">
+					<img src="resources/images/jupiter-pic2.png" alt="jupiter pic 2">
+				</div>
+			</div>
+		</div>
+
+		<div class="main-block-2">
+			<div class="main2">
+	 			<div id="block4" class="divy">
+					<h2>What is Jupiter Like?</h2>
+					<p>
+						Jupiter is called a gas giant planet. Its atmosphere is made up of mostly hydrogen gas and
+						helium gas, like the sun. The planet is covered in thick red, brown, yellow and white clouds.
+						The clouds make the planet look like it has stripes.
+
+					<p>
+						One of Jupiter's most famous features is the Great Red Spot. It is a giant spinning storm,
+						resembling a hurricane. At its widest point, the storm is about 3 1/2 times the diameter of Earth.
+						Jupiter is very windy. Winds range from 192 mph to more than 400 mph.
+					</p>
+
+					<p>
+						The temperature in the clouds of Jupiter is about minus 145 degrees Celsius
+						(minus 234 degrees Fahrenheit). The temperature near the planet's center is much, much hotter.
+						The core temperature may be about 24,000 degrees Celsius (43,000 degrees Fahrenheit).
+						That's hotter than the surface of the sun!
+					</p>
+
+					<p>
+						Jupiter rotates, or spins, faster than any other planet. One rotation equals one day. Jupiter's day is only about 10 hours long.
+						Jupiter's orbit around the sun is elliptical, or oval-shaped. Jupiter takes 12 Earth years to make one revolution around the sun,
+						so one year on Jupiter is equal to 12 years on Earth.
+					</p>
+	            </div>
+			      </div>
+			      <div class="sidemenu2">
+					<div id="block6" class="divy">
+						<img src="resources/images/jupiter-red-spot.png" alt="jupiter red spot pic">
+					</div>
+			      </div>
+			</div>
+		    <div class="clearfix"></div>
+		    <div id="block7" class="divy clearfix">
+		    	<ul>
+		    		<li><a th:href="@{/about}">About</a></li>
+		    		<li><a th:href="@{/contact}">Contact</a></li>
+		    	</ul>
+		    </div>
+		  </div>
+	</body>
+
+</html>

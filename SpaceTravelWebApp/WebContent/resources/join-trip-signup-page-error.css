@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+.container
+{
+    font-size: 20px;
+}
+
+#block1
+{
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 1%;
+}
+
+#back-btn a
+{
+	color: black;
+	background-color: orange;
+    border-color: yellow;
+    display: inline-block;
+    border-radius: .25em;
+    border: 1px solid transparent;
+    padding: .5rem .5rem;
+    margin-left: 10px;
+    margin-bottom: 15px;
+	text-decoration: none;
+}

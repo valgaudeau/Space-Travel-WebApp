@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home Page</title>
+		<link rel="stylesheet" type="text/css" href="resources/home.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		        <li ><a id="a-left" th:href="@{/showTrips}">All Currently Planned Trips</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		       </ul>
+		    </div>
+        <div class="whitespace">
+          <h1>Welcome to Noopnoop Galactic Agency</h1>
+        </div>
+		<div class="main-block-1">
+			<div class="main1">
+			   <div id="block3" class="divy">
+	              <p>
+	              	Ever wanted to go on the adventure of a lifetime and explore the galaxy?
+					Here at Noopnoop's, we've made it our goal to give you the opportunity to travel to other planets.
+					Check out all of our available destinations below!
+	              </p>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="destination-tables">
+			<div class="row">
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th scope="col"><a th:href="@{/mars-description}">MARS</a></th>
+							<th scope="col"><a th:href="@{/mercury-description}">MERCURY</a></th>
+							<th scope="col"><a th:href="@{/venus-description}">VENUS</a></th>
+							<th scope="col"><a th:href="@{/jupiter-description}">JUPITER</a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a th:href="@{/mars-description}"><img src="resources/images/mars-pic.png" alt="picture of Mars"></a></td>
+							<td><a th:href="@{/mercury-description}"><img src="resources/images/mercury-pic.png" alt="picture of Mercury"></a></td>
+							<td><a th:href="@{/venus-description}"><img src="resources/images/venus-pic.png" alt="picture of Venus"></a></td>
+							<td><a th:href="@{/jupiter-description}"><img src="resources/images/jupiter-pic.png" alt="picture of Jupiter"></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="row">
+				<table class="table table-hover">
+					<thead>
+						<tr>			
+							<th scope="col"><a th:href="@{/saturn-description}">SATURN</a></th>
+							<th scope="col"><a th:href="@{/uranus-description}">URANUS</a></th>
+							<th scope="col"><a th:href="@{/neptune-description}">NEPTUNE</a></th>
+							<th scope="col"><a th:href="@{/pluto-description}">PLUTO</a></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a th:href="@{/saturn-description}"><img src="resources/images/saturn-pic.png" alt="picture of Saturn"></a></td>
+							<td><a th:href="@{/uranus-description}"><img src="resources/images/uranus-pic.png" alt="picture of Uranus"></a></td>
+							<td><a th:href="@{/neptune-description}"><img src="resources/images/neptune-pic.png" alt="picture of Neptune"></a></td>
+							<td><a th:href="@{/pluto-description}"><img src="resources/images/pluto-pic.png" alt="picture of Pluto"></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
+		</div>
+
+		 <div id="block7" class="divy clearfix">
+		   	<ul>
+		    	<li><a th:href="@{/about}">About</a></li>
+		    	<li><a th:href="@{/contact}">Contact</a></li>
+		    </ul>
+		  </div>
+	   </div>
+	</body>
+
+</html>

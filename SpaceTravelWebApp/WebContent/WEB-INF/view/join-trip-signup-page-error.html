@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Join Trip Signup Page Error</title>
+<link rel="stylesheet" type="text/css" href="resources/join-trip-signup-page-error.css" th:href="@{/resources/join-trip-signup-page-error.css}">
+<!-- for the working css link, see https://stackoverflow.com/questions/25996056/reference-a-css-file-with-thymeleaf-in-spring-mvc -->
+</head>
+
+<body>
+	<div class="container">
+		<div id="block1">
+			You have already signed up for this trip!
+		</div>
+		<div id="back-btn">
+			<a th:href="@{/showTrips}">Back</a>
+		</div>
+	</div>
+</body>
+</html>

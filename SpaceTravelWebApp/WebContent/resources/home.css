@@ -1,0 +1,158 @@
+@charset "ISO-8859-1";
+
+/* @media only screen and (max-width: 600px) */
+
+body
+{
+  font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+  background-color: rgb(28, 20, 31);
+}
+
+.container
+{
+  height: auto;
+  width: 72%;
+  background-color:white;
+  margin: 0 auto;
+}
+
+#a-left
+{
+  padding-left: 7px;
+  border-left: 3px solid blue;
+}
+
+.whitespace
+{
+	text-align: center;
+}
+
+h1
+{
+  padding-left: 20px;
+  color: darkblue;
+}
+
+h2
+{
+  font-size: 18px;
+}
+
+p
+{
+  margin-top: 0px;
+}
+
+.divy
+{
+  height: 250px;
+}
+
+#block1 img
+{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}​
+
+#block2
+{
+  height:50px;
+}
+
+.main-block-1
+{
+  padding-left: 8%;
+}
+
+#block3
+{
+  text-align: center;
+  font-size: 1.1em;
+  height: auto;
+}
+
+th
+{
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+td
+{
+  height: 210px;
+  width: 20%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+table img
+{
+  width: 100%;
+  height: 210px;
+  border-radius: 5%;
+}
+
+#block7
+{
+  height: 60px;
+  background-color: #CDCDCD;
+}
+
+#block7 ul
+{
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.main-block-1
+{
+  display: block;
+}
+
+.main1
+{
+  width: 90%;
+  background-color:white;
+}
+
+.navbar li
+{
+  display: inline-block;
+  margin-right: -5px;
+  /* margin-right: -4px; is what solved the issue with hover on navbar menu not hightlighting what I wanted. See https://designshack.net/articles/css/whats-the-deal-with-display-inline-block/  
+  The article explained how to achieve inline-block without whitespace between elements as is the default. */ 
+  height:50px;
+  line-height: 45px;
+  font-size: 20px;
+  min-width: 70px;
+}
+
+.navbar a
+{
+  padding-left: 4px;
+  padding-right: 6px;
+  border-right: 3px solid blue;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.navbar a:hover
+{
+  background-color: blue;
+  opacity: 0.8;
+  color: white;
+}
+
+.navbar ul
+{
+  background-color: black;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}

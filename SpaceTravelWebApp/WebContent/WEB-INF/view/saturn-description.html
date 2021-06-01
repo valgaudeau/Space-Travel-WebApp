@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Page dedicated to information about Saturn</title>
+		<link rel="stylesheet" type="text/css" href="resources/saturn-description.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		        <li><a id="a-left" th:href="@{/}">Home</a></li>
+		        <li ><a th:href="@{/showTrips}">All Currently Planned Trips</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		       </ul>
+		    </div>
+        <div class="whitespace">
+          <a th:href="@{/showTrips}"><h1>Destination Saturn - Book Your Trip Now!</h1></a>
+        </div>
+		<div class="main-block-1">
+			<div class="main1">
+			   <div id="block3" class="divy">
+	              <p>
+	               Saturn is the sixth planet from the Sun and the second largest planet in our solar system. Adorned with a dazzling system of icy rings, Saturn is unique among the planets. 
+	               It is not the only planet to have rings, but none are as spectacular or as complex as Saturn's. Like fellow gas giant Jupiter, Saturn is a massive ball made mostly of hydrogen and helium.   
+	              </p>
+
+	              <p>
+	                Saturn's interior is most likely composed of a core of iron-nickel and rock (silicon and oxygen compounds). 
+	                Its core is surrounded by a deep layer of metallic hydrogen, an intermediate layer of liquid hydrogen and liquid helium, and finally a gaseous outer layer. 
+	                Saturn has a pale yellow hue due to ammonia crystals in its upper atmosphere. An electrical current within the metallic hydrogen layer is thought to give rise to Saturn's 
+	                planetary magnetic field, which is weaker than the Earth's, but which has a magnetic moment 580 times that of Earth due to Saturn's larger size. Saturn's magnetic field strength 
+	                is around one-twentieth of Jupiter's. The outer atmosphere is generally bland and lacking in contrast, although long-lived features can appear. Wind speeds on Saturn can reach 
+	                1,800 km/h (1,100 mph; 500 m/s), higher than on Jupiter but not as high as on Neptune.
+	              </p>
+	              
+	              <p>
+	              	The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles, with a smaller amount of rocky debris and dust. 
+	              	At least 82 moons are known to orbit Saturn, of which 53 are officially named; this does not include the hundreds of moonlets in its rings. Titan, 
+	              	Saturn's largest moon and the second largest in the Solar System, is larger than the planet Mercury, although less massive, and is the only moon in 
+	              	the Solar System to have a substantial atmosphere.
+	              </p>
+
+				</div>
+			</div>
+			<div class="sidemenu1">
+				<div id="block5" class="divy">
+					<img src="resources/images/saturn-pic.png" alt="saturn pic">
+				</div>
+			</div>
+		</div>
+
+		<div class="main-block-2">
+			<div class="main2">
+	 			<div id="block4" class="divy">
+					<h2>What is Saturn Like?</h2>
+					<p>
+						Saturn is a gas giant composed predominantly of hydrogen and helium. It lacks a definite surface, though it may have a solid core. 
+						Saturn's rotation causes it to have the shape of an oblate spheroid; that is, it is flattened at the poles and bulges at its equator. 
+						Its equatorial and polar radii differ by almost 10%: 60,268 km versus 54,364 km. Jupiter, Uranus, and Neptune, the other giant planets in the Solar System, 
+						are also oblate but to a lesser extent. The combination of the bulge and rotation rate means that the effective surface gravity along the equator, 8.96 m/s2, is 74% 
+						of what it is at the poles and is lower than the surface gravity of Earth. However, the equatorial escape velocity of nearly 36 km/s is much higher than that of Earth.
+					<p>
+						The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles, with a smaller amount of rocky debris and dust. 
+						At least 82 moons are known to orbit Saturn, of which 53 are officially named; this does not include the hundreds of moonlets in its rings. 
+						Titan, Saturn's largest moon and the second largest in the Solar System, is larger than the planet Mercury, although less massive, and is 
+						the only moon in the Solar System to have a substantial atmosphere.
+					</p>
+					
+					<p>
+						It's hard to imagine, but Saturn is the only planet in our solar system whose average density is less than water. The giant gas planet could float in a bathtub if such a 
+						colossal thing existed!
+					</p>
+
+	            </div>
+			      </div>
+			      <div class="sidemenu2">
+					<div id="block6" class="divy">
+						<img src="resources/images/saturn-rings.png" alt="The rings of saturn">
+					</div>
+			      </div>
+			</div>
+		    <div class="clearfix"></div>
+		    <div id="block7" class="divy clearfix">
+		    	<ul>
+		    		<li><a th:href="@{/about}">About</a></li>
+		    		<li><a th:href="@{/contact}">Contact</a></li>
+		    	</ul>
+		    </div>
+		  </div>
+	</body>
+
+</html>

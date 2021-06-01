@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Page dedicated to information about Mars</title>
+		<link rel="stylesheet" type="text/css" href="resources/mars-description.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		        <li><a id="a-left" th:href="@{/}">Home</a></li>
+		        <li ><a th:href="@{/showTrips}">All Currently Planned Trips</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		       </ul>
+		    </div>
+        <div class="whitespace">
+          <a th:href="@{/showTrips}"><h1>Destination Mars - Book Your Trip Now!</h1></a>
+        </div>
+		<div class="main-block-1">
+			<div class="main1">
+			   <div id="block3" class="divy">
+	              <p>
+	                Mars is one of the most explored bodies in our solar system! It's the fourth planet from the Sun. Mars is a dusty, cold, 
+	                desert world with a very thin atmosphere. Mars is also a dynamic planet with seasons, polar ice caps, canyons, 
+	                extinct volcanoes, and evidence that it was even more active in the past.
+	              </p>
+
+	              <p>
+	                In the late 1800s when people first observed the canal-like features on Mars' surface, many speculated that an intelligent 
+	                alien species resided there. This led to numerous stories about Martians, some of whom invade Earth, like in the 1938 radio drama, 
+	                "The War of the Worlds." According to an enduring urban legend, many listeners believed the story to be real news coverage 
+	                of an invasion, causing widespread panic.
+	              </p>
+	              
+	              <p>
+	              	Countless stories since have taken place on Mars or explored the possibilities of its Martian inhabitants. 
+	              	Movies like "Total Recall" (1990 and 2012) take us to a terraformed Mars and a struggling colony running out of air. 
+	              	A Martian colony and Earth have a prickly relationship in "The Expanse" television series and novels.
+	              </p>
+
+				</div>
+			</div>
+			<div class="sidemenu1">
+				<div id="block5" class="divy">
+					<img src="resources/images/mars-pic.png" alt="mars pic">
+				</div>
+			</div>
+		</div>
+
+		<div class="main-block-2">
+			<div class="main2">
+	 			<div id="block4" class="divy">
+					<h2>What is Mars Like?</h2>
+					<p>
+						Mars has a thin atmosphere made up mostly of carbon dioxide, nitrogen, and argon gases. 
+						To our eyes, the sky would be hazy and red because of suspended dust instead of the familiar blue tint we see on Earth. 
+						Mars' sparse atmosphere doesn't offer much protection from impacts by such objects as meteorites, asteroids, and comets.
+					<p>
+						The temperature on Mars can be as high as 70 degrees Fahrenheit (20 degrees Celsius) or as low as about -225 degrees 
+						Fahrenheit (-153 degrees Celsius). And because the atmosphere is so thin, heat from the Sun easily escapes this planet. 
+						If you were to stand on the surface of Mars on the equator at noon, it would feel like spring at your feet 
+						(75 degrees Fahrenheit or 24 degrees Celsius) and winter at your head (32 degrees Fahrenheit or 0 degrees Celsius).
+					</p>
+
+					<p>
+						Occasionally, winds on Mars are strong enough to create dust storms that cover much of the planet. 
+						After such storms, it can be months before all of the dust settles.
+					</p>
+					
+					<p>
+		              There is water on Mars today, but the Martian atmosphere is too thin for liquid water to exist for long on the surface. 
+		              Today, water on Mars is found in the form of water-ice just under the surface in the polar regions as well as in briny (salty) 
+		              water, which seasonally flows down some hillsides and crater walls.
+	              	</p>
+
+	            </div>
+			      </div>
+			      <div class="sidemenu2">
+					<div id="block6" class="divy">
+						<img src="resources/images/mars-pic2.png" alt="mars second pic">
+					</div>
+			      </div>
+			</div>
+		    <div class="clearfix"></div>
+		    <div id="block7" class="divy clearfix">
+		    	<ul>
+		    		<li><a th:href="@{/about}">About</a></li>
+		    		<li><a th:href="@{/contact}">Contact</a></li>
+		    	</ul>
+		    </div>
+		  </div>
+	</body>
+
+</html>

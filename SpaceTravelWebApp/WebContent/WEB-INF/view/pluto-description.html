@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+	  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Page dedicated to information about Pluto</title>
+		<link rel="stylesheet" type="text/css" href="resources/pluto-description.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		  <div id="block1" class="divy">
+          	<a th:href="@{/}"><img src="resources/images/space-travel-header.png" alt="header pic"></a>
+          </div>
+		    <div id="block2" class="navbar">
+		      <ul>
+		        <li><a id="a-left" th:href="@{/}">Home</a></li>
+		        <li ><a th:href="@{/showTrips}">All Currently Planned Trips</a></li>
+		        <li sec:authorize="isAnonymous()"><a th:href="@{/login}">Login</a></li>
+		        <li sec:authorize="!isAnonymous()"><a th:href="@{/logout}">Logout</a></li>
+		       </ul>
+		    </div>
+        <div class="whitespace">
+          <a th:href="@{/showTrips}"><h1>Destination Pluto - Book Your Trip Now!</h1></a>
+        </div>
+		<div class="main-block-1">
+			<div class="main1">
+			   <div id="block3" class="divy">
+	              <p>
+	               Pluto (minor planet designation: 134340 Pluto) is a dwarf planet in the Kuiper belt, a ring of bodies beyond the orbit of Neptune. 
+	               It was the first and the largest Kuiper belt object to be discovered. After Pluto was discovered in 1930, it was declared 
+	               to be the ninth planet from the Sun. Beginning in the 1990s, its status as a planet was questioned following the discovery 
+	               of several objects of similar size in the Kuiper belt, including the dwarf planet Eris. This led the International Astronomical 
+	               Union (IAU) in 2006 to formally define the term "planet", excluding Pluto and reclassifying it as a dwarf planet.   
+	              </p>
+
+	              <p>
+	                Pluto is the ninth-largest and tenth-most-massive known object directly orbiting the Sun. 
+	                It is the largest known trans Neptunian object by volume but is less massive than Eris. Like other Kuiper belt objects, 
+	                Pluto is primarily made of ice and rock and is relatively small one-sixth the mass of the Moon and one-third its volume. 
+	                It has a moderately eccentric and inclined orbit during which it ranges from 30 to 49 astronomical units or AU 
+	                (4.4 to 7.4 billion km) from the Sun. This means that Pluto periodically comes closer to the Sun than Neptune, 
+	                but a stable orbital resonance with Neptune prevents them from colliding. 
+	                Light from the Sun takes 5.5 hours to reach Pluto at its average distance (39.5 AU).
+	              </p>
+	              
+	              <p>
+	              	The name Pluto, after the Roman god of the underworld, was proposed by Venetia Burney (1918 to 2009), an eleven-year-old 
+	              	schoolgirl in Oxford, England, who was interested in classical mythology. She suggested it in a conversation with her 
+	              	grandfather Falconer Madan, a former librarian at the University of Oxford's Bodleian Library, who passed the name to 
+	              	astronomy professor Herbert Hall Turner, who cabled it to colleagues in the United States.
+	              </p>
+
+				</div>
+			</div>
+			<div class="sidemenu1">
+				<div id="block5" class="divy">
+					<img src="resources/images/pluto-pic.png" alt="pluto pic">
+				</div>
+			</div>
+		</div>
+
+		<div class="main-block-2">
+			<div class="main2">
+	 			<div id="block4" class="divy">
+					<h2>What is Pluto Like?</h2>
+					<p>
+						Pluto is a fascinating world has blue skies, spinning moons, mountains as high as the Rockies, and it snows... 
+						but the snow is red! Pluto is very, very cold. It is much colder than Antarctica. 
+						It is so cold that Earth's air would freeze into a kind of snow there.
+					<p>
+						The plains on Pluto's surface are composed of more than 98 percent nitrogen ice, with traces of methane and carbon monoxide.
+						Nitrogen and carbon monoxide are most abundant on the anti-Charon face of Pluto (around 180 degrees longitude, where 
+						Tombaugh Regio's western lobe, Sputnik Planitia, is located), whereas methane is most abundant near 300 degrees east. 
+						The mountains are made of water ice. Pluto's surface is quite varied, with large differences in both brightness and color. 
+						Pluto is one of the most contrastive bodies in the Solar System, with as much contrast as Saturn's moon Iapetus. 
+						The color varies from charcoal black, to dark orange and white. Pluto's color is more similar to that of Io with 
+						slightly more orange and significantly less red than Mars. Notable geographical features include Tombaugh Regio, or 
+						the "Heart" (a large bright area on the side opposite Charon), Cthulhu Macula, or the "Whale" 
+						(a large dark area on the trailing hemisphere), and the "Brass Knuckles" 
+						(a series of equatorial dark areas on the leading hemisphere).
+					</p>
+					
+					<p>
+						Sputnik Planitia, the western lobe of the "Heart", is a 1,000 km-wide basin of frozen nitrogen and carbon monoxide ices, 
+						divided into polygonal cells, which are interpreted as convection cells that carry floating blocks of water ice crust and 
+						sublimation pits towards their margins; there are obvious signs of glacial flows both into and out of the basin.
+					</p>
+
+	            </div>
+			      </div>
+			      <div class="sidemenu2">
+					<div id="block6" class="divy">
+						<img src="resources/images/pluto-surface.png" alt="pluto surface picture">
+					</div>
+			      </div>
+			</div>
+		    <div class="clearfix"></div>
+		    <div id="block7" class="divy clearfix">
+		    	<ul>
+		    		<li><a th:href="@{/about}">About</a></li>
+		    		<li><a th:href="@{/contact}">Contact</a></li>
+		    	</ul>
+		    </div>
+		  </div>
+	</body>
+
+</html>

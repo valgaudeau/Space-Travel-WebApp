@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- xmlns helps to avoid namespace conflicts between different xml documents -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Form page</title>
+<link rel="stylesheet" type="text/css" href="resources/main.css">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<!-- Because we want our form to be centered, we add an empty column here (before content) and one after the content.
+			 In total, we have 3 columns on this page -->
+			<div class="col-sm">
+			</div>
+			
+			<div class="col-sm">
+				<h1>Add New Trip</h1>
+				
+				<!-- The line below is important - Note that we indicate which method to go to, the object, and the HTTP method we want
+					 processForm is the PostMapping of the method showTourData in the HomeController -->
+				<form action="#" th:action="@{/processFormData}" th:object="${spaceTrip}" method="post">
+				
+					<div class="form-group">
+						<input type="hidden" class="form-control" th:field="*{id}">
+					</div>
+					
+					<div class="form-group">
+						<input type="hidden" class="form-control" th:field="*{spaceTripDetails.id}">
+					</div>
+					
+					<div class="form-group">
+						<input type="hidden" class="form-control" th:field="*{spaceTripDetails.numberOfPassengers}">
+					</div>
+					
+					<div class="form-group">
+						<input type="hidden" class="form-control" th:field="*{spaceTripDetails.tripDescription}">
+					</div>
+					
+					<!-- Here we will put every object into a different div -->
+					<div class="form-group">
+						<!-- The line directly below is linked to validation when users enter data into the form -->
+						<label>Name</label>
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+						<input type="text" class="form-control" th:field="*{name}">
+					</div>
+					
+					<div class="form-group">
+						<!-- The line directly below is linked to validation when users enter data into the form -->
+						<label>Code</label>
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></div>
+						<input type="text" class="form-control" th:field="*{code}">
+					</div>
+				
+					<div class="form-group">
+						<label>Destination</label>
+						<select name="destination" class="form-control">
+							<!-- Here we have to put the full path to the enum attribute in the Tour class -->
+							<option th:each="destination : ${T(main.model.SpaceTrip.Destination).values()}"
+		 					th:value="${destination}" th:text="${destination}"></option>
+						</select>
+					</div>
+							
+					<div class="form-group">
+						<!-- The line directly below is linked to validation when users enter data into the form -->
+						<label>Departure Date</label>
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></div>
+						<input type="date" class="form-control" th:field="*{date}">
+					</div>
+				
+					<div class="form-group">
+						<!-- The line directly below is linked to validation when users enter data into the form -->
+						<label>Trip Duration</label>
+						<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('duration')}" th:errors="*{duration}"></div>
+						<input type="number" class="form-control" th:field="*{duration}">
+					</div>
+					
+					<div class="form-row">
+						<div class="col">
+							<input class="btn btn-success" type="submit" value="Submit">
+						</div>
+						<div class="col">
+							<a th:href="@{/showTrips}" class="btn btn-warning float-right">Back</a>
+						</div>
+					</div>	
+				</form>
+			</div>
+			<!-- Here we add the empty column after our content -->
+			<div class="col-sm">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
